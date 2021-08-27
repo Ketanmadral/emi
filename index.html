@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Emi</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="index.js"></script>
+</head>
+<body >
+<div class="border p-3 m-4" style="background: rgb(222,224,238);
+background: radial-gradient(circle, rgba(222,224,238,1) 0%, rgba(11,39,226,1) 94%);">
+  <div class="row mb-5 ">
+    <div class="col ">
+     
+      <div class="input-group mb-3">
+  <span class="input-group-text">Amount you need &#8377;</span>
+  <input type="text" id="txtAmount" class="form-control " aria-label="Amount (to the nearest dollar)">
+  </div>
+  </div>
+    
+    <div class="col">
+      <div class="input-group mb-3">
+  <span class="input-group-text">For </span>
+  <input type="text" id="txtYear" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">year's</span>
+</div>
+</div>
+    
+    <div class="col">
+       <div class="input-group mb-3">
+  <span class="input-group-text">Interest</span>
+  <input type="text" id="txtInterest" class="form-control" aria-label="Amount (to the nearest dollar)">
+  <span class="input-group-text">rate</span>
+</div>
+</div>
+</div>
+   
+   <div class="row">
+    <div class="col">
+      <div class="input-group  mb-3">
+  <span class="input-group-text"> 50,000</span>
+   <input type="range"  onchange="ChangeAmount()"   min="50000"  max="400000" value="50000"         id="SliderAmount" class="form-range form-control border-0" >
+  <span class="input-group-text"> 4,00 000</span>
+</div>
+</div>
+    
+    <div class="col">
+       <div class="input-group mb-3">
+  <span class="input-group-text"> 1year</span>
+  <input type="range"  onchange="ChangeYear()"   min="1" max="5" value="1"  id="SliderYear"    class="form-range form-control border-0 " >
+  <span class="input-group-text"> 5year</span>
+</div>
+ </div>
+ 
+  <div class="col">
+    <div class="input-group mb-3">
+  <span class="input-group-text"> 10.5%</span>
+   <input type="range"  onchange="ChangeInterest()"  min="10.0"   max="21" id="SliderInterest"  class="form-range form-control border-0" >
+  <span class="input-group-text"> 21%</span>
+</div>
+</div>
+</div>
+  
+  
+<button type="button" 
+onclick="Click()"    class="btn btn-primary mt-5 ">Calculate</button>
+  
+</div>
+
+<span id="result" class=" text-center fs-4 " style="display: none;">
+  Your monthly will be EMI is &#8377;<b  id="total"></b>
+
+</span>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>
